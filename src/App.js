@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, Navigate } from "react-router-dom";
+import Drinks from "./components/Drinks";
+import Header from "./components/Header";
+import Pizza from "./components/Pizza";
+import Sidebar from "./components/Sidebar";
+import CartProvider from "./components/CartProvider";
+import Delivery from "./components/Delivery";
+import Contacts from "./components/Contacts";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <div>
+        <Sidebar />
+        <Header />
+        <Routes>
+          <Route path="/pizza" element={<Pizza />} />
+          <Route path="/drinks" element={<Drinks />} />
+          <Route path="/delivery" element={<Delivery />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/" element={<Navigate to="/pizza" />} />
+        </Routes>
+      </div>
+    </CartProvider>
   );
 }
 

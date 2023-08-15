@@ -1,0 +1,137 @@
+@use "../global/boilerplate" as *;
+
+.drinks {
+  background-color: #f9f9f9;
+  display: block;
+
+  .drinks-section {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 1200px) {
+      max-width: 1140px;
+    }
+
+    .catalog-list {
+      box-sizing: border-box;
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        .catalog-item-cont {
+          text-align: center;
+          position: relative;
+          width: 33.33%;
+          padding: 15px;
+
+          .catalog-item {
+            display: block;
+            border: 0px solid #ebebeb;
+            border-radius: 6px;
+            overflow: hidden;
+            text-align: left;
+            background: #fff;
+
+            .img-cont {
+              text-align: center;
+              margin: 15px auto 0 auto;
+              max-width: 90%;
+
+              .drinks-pic {
+                max-width: 100%;
+                max-height: 315px;
+              }
+            }
+
+            .text-cont {
+                padding: 5px 20px 20px 20px;
+
+                .item-title {
+                    font-size: 25px;
+                    font-weight: 500;
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    align-content: space-around;
+                    justify-content: space-between;
+                }
+
+                .item-text {
+                    padding: 10px 0 0 0;
+                    height: 50px;
+                    color: #a4a4a4;
+                    font-size: 1.5rem;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                .catalog-product-form {
+                  .item-params {
+                    padding: 15px 0 0 0;
+                    font-size: 1.5rem;
+                    font-family: Arial, Helvetica, sans-serif;
+
+                    label {
+                      position: relative;
+                      min-height: 1.5rem;
+                      padding-left: 1.5rem;
+                    }
+                  }
+                }
+
+                .catalog-item-button {
+                    padding: 20px 0 0 0;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+
+                    .old-price {
+                        text-decoration: line-through;
+                        color: #a4a4a4;
+                        position: absolute;
+                        font-size: 18px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        top: 7px;
+                        left: 10px;
+                    }
+
+                    .price {
+                        color: #c32;
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+
+                    .add-cart-button {
+                        color: #c32;
+                        font-size: 1.7rem;
+                        border-radius: 10px;
+                        border: 2px solid #c32;
+                        box-sizing: border-box;
+                        background: #fff;
+                        padding: 8px 15px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #c32;
+                            color: #fff;
+                        }
+                    }
+                }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
