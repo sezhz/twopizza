@@ -1,0 +1,82 @@
+@use "../global/boilerplate" as *;
+
+.cart {
+  background-color: #f9f9f9;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+
+  .cart-content {
+    margin: 40px 300px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    height: 50%;
+    width: 100%;
+
+    @media (max-width: 760px) {
+      margin: 10px;
+      padding: 10px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      margin-bottom: 100px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      li {
+        list-style-type: none;
+
+        .cart-item-image {
+          max-width: 200px;
+          border-radius: 100%;
+          max-height: 315px;
+          width: auto;
+        }
+      }
+    }
+
+    .order-cont {
+      .order-segment {
+        margin-bottom: 40px;
+
+        input {
+          border-radius: 2%;
+        }
+
+        select {
+          font-size: 20px;
+        }
+
+        label {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    button {
+      margin-top: 50px;
+      color: #c32;
+      font-size: 1.7rem;
+      font-weight: 100;
+      border-radius: 10px;
+      border: 2px solid #c32;
+      box-sizing: border-box;
+      background: transparent;
+      padding: 8px 15px;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        background: rgba($color: #c32, $alpha: 0.8);
+        color: #fff;
+        border: 2px solid rgba($color: #000000, $alpha: 0.5);
+      }
+    }
+  }
+}

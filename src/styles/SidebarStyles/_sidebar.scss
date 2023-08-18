@@ -32,6 +32,7 @@
       align-content: start;
       margin-bottom: 20px;
       height: 100%;
+      margin-top: 75px;
 
       &:hover {
         align-items: center;
@@ -89,7 +90,7 @@
           list-style-type: none;
 
           li {
-            div {
+            .cart-item-info {
               text-align: center;
 
               img {

@@ -1,6 +1,7 @@
 import React from "react";
 import cart from "../img/cart.png";
 import { useCart } from "./CartProvider";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const { cartItems, removeItemFromCart } = useCart([]);
@@ -49,7 +50,7 @@ const Sidebar = () => {
             <ul>
               {groupedCartItems.map((item, index) => (
                 <li key={index}>
-                  <div>
+                  <div className="cart-item-info">
                     <img
                       src={item.imgSrc}
                       alt={item.title}
@@ -74,9 +75,9 @@ const Sidebar = () => {
               ))}
             </ul>
           </div>
-          <a href="/cart" className="cart-order">
+          <Link to="/cart" className="cart-order">
             Оформити
-          </a>
+          </Link>
         </div>
       </div>
     </div>

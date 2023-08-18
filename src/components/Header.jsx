@@ -17,11 +17,24 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div id="header" className={`header ${isScrolled ? "scrolled" : ""}`}>
-      <div className={`header-cont ${isScrolled ? "vertical" : ""}`}>
+      <div className="header-cont">
         <div className="logo">
-          <img className="header-logo" src={logo} alt="logo" />
+          <img
+            className="header-logo"
+            src={logo}
+            alt="logo"
+            onClick={scrollToTop}
+          />
         </div>
         <nav className="menu">
           <ul className="menu-list">

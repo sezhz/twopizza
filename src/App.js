@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import CartProvider from "./components/CartProvider";
 import Delivery from "./components/Delivery";
 import Contacts from "./components/Contacts";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/drinks" element={<Drinks />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/" element={<Navigate to="/pizza" />} />
         </Routes>
       </div>
