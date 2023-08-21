@@ -25,13 +25,31 @@ const CartProvider = ({ children }) => {
     setCartItems(updatedCart);
   };
 
+  const removeItemsByTitleAndSize = (title, diameter) => {
+    const updatedCart = cartItems.filter(
+      (item) => item.title !== title || item.size.diameter !== diameter
+    );
+    setCartItems(updatedCart);
+  };
+
   const clearCart = () => {
     setCartItems([]);
-  }
+  };
+
+  const updateCart = (updatedItems) => {
+    setCartItems(updatedItems);
+  };
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addItemToCart, removeItemFromCart, clearCart }}
+      value={{
+        cartItems,
+        addItemToCart,
+        removeItemFromCart,
+        removeItemsByTitleAndSize,
+        clearCart,
+        updateCart,
+      }}
     >
       {children}
     </CartContext.Provider>

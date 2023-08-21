@@ -2,9 +2,15 @@ import React from "react";
 import cart from "../img/cart.png";
 import { useCart } from "./CartProvider";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 const Sidebar = () => {
-  const { cartItems, removeItemFromCart } = useCart([]);
+  const {
+    cartItems,
+    removeItemFromCart,
+    addItemToCart,
+    removeItemsByTitleAndSize,
+  } = useCart([]);
 
   const cartTotalClasses =
     cartItems.length > 0 ? "cart-total active" : "cart-total";
@@ -27,6 +33,24 @@ const Sidebar = () => {
     (total, item) => +total + +(item.size.price * item.quantity),
     0
   );
+
+  const handleAddToCart = (item) => {
+    const selectedItem = {
+      id: uuidv4(),
+      imgSrc: item.imgSrc,
+      title: item.title,
+      description: item.description,
+      size: item.size,
+      price: item.size.price,
+    };
+    addItemToCart(selectedItem);
+  };
+
+  const handleDecreaseQuantity = (item) => {
+    if (item.quantity > 1) {
+      removeItemFromCart(item.id);
+    }
+  };
 
   return (
     <div className="sidebar">
@@ -62,10 +86,29 @@ const Sidebar = () => {
                     <div>
                       {item.size.price * item.quantity} грн - {item.quantity} шт
                     </div>
+                    <div className="change-quantity-container">
+                      <button
+                        className="change-quantity-btn"
+                        onClick={() => handleAddToCart(item)}
+                      >
+                        +
+                      </button>
+                      <button
+                        className="change-quantity-btn"
+                        onClick={() => handleDecreaseQuantity(item)}
+                      >
+                        -
+                      </button>
+                    </div>
                     <div>
                       <button
                         className="remove-cart-item"
-                        onClick={() => removeItemFromCart(item.id)}
+                        onClick={() =>
+                          removeItemsByTitleAndSize(
+                            item.title,
+                            item.size.diameter
+                          )
+                        }
                       >
                         вилучити з кошика
                       </button>

@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import "../dist/styles.css";
 import logo from "../img/logo.png";
 import NavItem from "./NavItem";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +47,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+      {isSidebarOpen && <Sidebar />}
     </div>
   );
 };

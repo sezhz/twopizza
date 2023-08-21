@@ -47,17 +47,19 @@
   }
 
   @media (min-width: 1200px) {
-    padding-left: 20.88%;
+    padding-left: 30px;
   }
 
   @media (max-width: 760px) {
     padding: 0;
     margin: 0;
+    z-index: 1000;
   }
 
   .header-cont {
     display: flex;
     align-items: center;
+    margin-left: 37rem;
 
     @media (max-width: 760px) {
       padding: 0;
@@ -70,20 +72,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 95px;
 
       @media (max-width: 760px) {
-        align-items: start;
-        justify-content: start;
+        display: none;
       }
 
       .header-logo {
         max-height: 9.5rem;
         display: block;
         cursor: pointer;
-
-        @media (max-width: 760px) {
-          max-height: 3rem;
-        }
       }
     }
 
@@ -104,6 +102,22 @@
         margin: 0;
         padding: 0;
         display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .fas {
+          font-size: 20px;
+          color: #333;
+          padding-left: 1rem;
+
+          &:hover {
+            color: #c32;
+          }
+
+          @media (min-width: 760px) {
+            display: none;
+          }
+        }
 
         li {
           padding: 0 30px;
