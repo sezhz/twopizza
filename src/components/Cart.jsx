@@ -75,13 +75,15 @@ const Cart = () => {
               </div>
               <PhoneNumberInput />
               <div className="order-segment">
-                <label htmlFor="deliveryTime">Час доставки: </label> <br />
-                <input
-                  type="time"
-                  id="deliveryTime"
-                  className="delivery-time"
-                  onChange={() => setFormValid(isFormValid())}
-                />
+                <label htmlFor="deliveryTime">
+                  Час доставки: <br />
+                  <input
+                    type="time"
+                    id="deliveryTime"
+                    className="delivery-time"
+                    onChange={() => setFormValid(isFormValid())}
+                  />
+                </label>
               </div>
               <div className="order-segment">
                 <h3>Сума до оплати: {totalSum} грн</h3>
