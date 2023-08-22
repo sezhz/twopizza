@@ -6,17 +6,17 @@ const drinksData = [
   {
     imgSrc: cola,
     title: "Coca-Cola",
-    sizes: [{ diameter: "0.5л", price: "33" }],
+    sizes: [{ diameter: "0.3л", price: "33" }],
   },
   {
     imgSrc: water,
     title: "Borjomi",
-    sizes: [{ diameter: "1.5л", price: "60" }],
+    sizes: [{ diameter: "0.5л", price: "40" }],
   },
   {
     imgSrc: beer,
     title: "Beer",
-    sizes: [{ diameter: "1.3л", price: "50" }],
+    sizes: [{ diameter: "0.5л", price: "50" }],
   },
 ];
 

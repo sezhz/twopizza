@@ -68,7 +68,7 @@
     overflow: auto;
 
     @media (max-width: 760px) {
-      overflow: hidden;
+      overflow: auto;
     }
 
     .small-cart__cont {
@@ -195,7 +195,7 @@
         .cart-item-image {
           max-width: 150px;
           max-height: 200px;
-          border-radius: 100%;
+          border-radius: 0;
         }
       }
 

@@ -1,15 +1,15 @@
-import belissima from "../img/belissima.jpeg";
-import bravissimo from "../img/bravissimo.jpeg";
-import chetyiresyira from "../img/chetyire-syira.jpeg";
-import chicken from "../img/chiken.jpeg";
-import deliczio from "../img/deliczio.jpeg";
-import gavajskaya from "../img/gavajskaya.jpeg";
-import gitemarmelatto from "../img/gite-marmelatto.jpeg";
-import kasiotore from "../img/kasiotore.jpeg";
-import laki from "../img/laki.jpeg";
-import perfetto from "../img/perfetto.jpeg";
-import salyami from "../img/salyami.jpeg";
-import sicziliya from "../img/sicziliya.jpeg";
+import belissima from "../img/belissima.png";
+import bravissimo from "../img/bravissimo.png";
+import chetyiresyira from "../img/chetyire-syira.png";
+import chicken from "../img/chiken.png";
+import deliczio from "../img/deliczio.png";
+import gavajskaya from "../img/gavajskaya.png";
+import gitemarmelatto from "../img/gite-marmelatto.png";
+import kasiotore from "../img/kasiotore.png";
+import laki from "../img/laki.png";
+import perfetto from "../img/perfetto.png";
+import salyami from "../img/salyami.png";
+import sicziliya from "../img/sicziliya.png";
 
 const pizzaData = [
   {

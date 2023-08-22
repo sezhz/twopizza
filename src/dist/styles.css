@@ -410,7 +410,7 @@ body {
 }
 @media (max-width: 760px) {
   .sidebar .small-cart {
-    overflow: hidden;
+    overflow: auto;
   }
 }
 .sidebar .small-cart .small-cart__cont {
@@ -518,7 +518,7 @@ body {
 .sidebar .small-cart .small-cart__cont .cart-items .cart-item-image {
   max-width: 150px;
   max-height: 200px;
-  border-radius: 100%;
+  border-radius: 0;
 }
 .sidebar .small-cart .small-cart__cont .cart-order {
   color: #c32;
