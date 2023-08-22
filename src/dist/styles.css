@@ -356,20 +356,50 @@ body {
   top: 0;
   right: -200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: right 0.5s ease, width 0.5s ease; /* Добавляем анимацию для ширины */
+  transition: right 0.5s ease, width 0.5s ease;
 }
 .sidebar:hover {
   right: 0;
-  width: 220px; /* Изменяем ширину при наведении */
+  width: 220px;
 }
 @media (max-width: 760px) {
   .sidebar {
-    right: -200px; /* Возвращаем начальное значение right для телефонного экрана */
-    width: 220px; /* Возвращаем начальную ширину для телефонного экрана */
+    right: -200px;
+    width: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  .sidebar.closed {
+    right: -200px;
+  }
+}
+.sidebar .sidebar-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 100%;
+  background-color: rgba(221, 220, 220, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .sidebar-line .cart-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #747373;
+}
+.sidebar .sidebar-line .cart-label .cart-letter {
+  color: #464545;
+}
+.sidebar .sidebar-line .cart-label span {
+  line-height: 2.5;
 }
 .sidebar .small-cart {
   display: block;
@@ -768,6 +798,12 @@ body {
   outline: none;
   font-family: "Roboto";
   font-size: 22px;
+}
+@media (max-width: 760px) {
+  .cart .cart-content .order-cont .order-segment .delivery-time {
+    width: 50%;
+    height: 40px;
+  }
 }
 .cart .cart-content .order-cont .order-segment select {
   font-size: 20px;

@@ -80,6 +80,11 @@
           outline: none;
           font-family: "Roboto";
           font-size: 22px;
+
+          @media (max-width: 760px) {
+            width: 50%;
+            height: 40px;
+          }
         }
 
         select {

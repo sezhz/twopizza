@@ -7,7 +7,7 @@ class PhoneNumberInput extends Component {
   }
 
   handlePhoneNumberChange = (e) => {
-    const input = e.target.value.replace(/\D/g, ""); // Оставляем только цифры
+    const input = e.target.value.replace(/\D/g, "");
     const formattedNumber = this.formatPhoneNumber(input);
     this.setState({ phoneNumber: formattedNumber });
   };

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import cart from "../img/cart.png";
 import { useCart } from "./CartProvider";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import lilcart from "../img/lilcart.png";
 
 const Sidebar = () => {
+  const [isSidebarClosed, setSidebarClosed] = useState(false);
+
   const {
     cartItems,
     removeItemFromCart,
@@ -52,8 +55,55 @@ const Sidebar = () => {
     }
   };
 
+  const handleSidebarToggle = () => {
+    setSidebarClosed(!isSidebarClosed);
+    const newSidebarState = isSidebarClosed ? "closed" : "";
+    window.location.href = `/cart?sidebar=${newSidebarState}`;
+  };
+
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isSidebarClosed ? "closed" : ""}`}>
+      <div className="sidebar-line">
+        <div className="cart-label">
+          <span>|</span>
+          <span>
+            <img src={lilcart} alt="cart" />
+          </span>
+          <span>|</span>
+          <span>
+            <img src={lilcart} alt="cart" />
+          </span>
+          <span>|</span>
+          <span>
+            <img src={lilcart} alt="cart" />
+          </span>
+          <span>|</span>
+          <span>
+            <img src={lilcart} alt="cart" />
+          </span>
+          <span className="cart-letter">к</span>
+          <span className="cart-letter">о</span>
+          <span className="cart-letter">ш</span>
+          <span className="cart-letter">и</span>
+          <span className="cart-letter">к</span>
+          <span>
+            <img src={lilcart} alt="cart" />
+          </span>
+          <span>|</span>
+          <span>
+            <img src={lilcart} alt="cart" />
+          </span>
+          <span>|</span>
+          <span>
+            <img src={lilcart} alt="cart" />
+          </span>
+          <span>|</span>
+          <span>
+            <img src={lilcart} alt="cart" />
+          </span>
+          <span>|</span>
+        </div>
+      </div>
       <div className="small-cart">
         <div className="small-cart__cont">
           <div className="small-cart__header">
@@ -118,7 +168,11 @@ const Sidebar = () => {
               ))}
             </ul>
           </div>
-          <Link to="/cart" className="cart-order">
+          <Link
+            to="/cart"
+            className="cart-order"
+            onClick={() => handleSidebarToggle()}
+          >
             Оформити
           </Link>
         </div>
