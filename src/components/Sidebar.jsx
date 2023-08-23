@@ -3,7 +3,7 @@ import cart from "../img/cart.png";
 import { useCart } from "./CartProvider";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import lilcart from "../img/lilcart.png";
+import lilcart from "../img/mini-cart.png";
 
 const Sidebar = () => {
   const [isSidebarClosed, setSidebarClosed] = useState(false);
@@ -65,43 +65,9 @@ const Sidebar = () => {
     <div className={`sidebar ${isSidebarClosed ? "closed" : ""}`}>
       <div className="sidebar-line">
         <div className="cart-label">
-          <span>|</span>
           <span>
             <img src={lilcart} alt="cart" />
           </span>
-          <span>|</span>
-          <span>
-            <img src={lilcart} alt="cart" />
-          </span>
-          <span>|</span>
-          <span>
-            <img src={lilcart} alt="cart" />
-          </span>
-          <span>|</span>
-          <span>
-            <img src={lilcart} alt="cart" />
-          </span>
-          <span className="cart-letter">к</span>
-          <span className="cart-letter">о</span>
-          <span className="cart-letter">ш</span>
-          <span className="cart-letter">и</span>
-          <span className="cart-letter">к</span>
-          <span>
-            <img src={lilcart} alt="cart" />
-          </span>
-          <span>|</span>
-          <span>
-            <img src={lilcart} alt="cart" />
-          </span>
-          <span>|</span>
-          <span>
-            <img src={lilcart} alt="cart" />
-          </span>
-          <span>|</span>
-          <span>
-            <img src={lilcart} alt="cart" />
-          </span>
-          <span>|</span>
         </div>
       </div>
       <div className="small-cart">

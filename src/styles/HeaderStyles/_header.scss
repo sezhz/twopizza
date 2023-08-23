@@ -18,7 +18,7 @@
     .header-cont {
       .logo {
         .header-logo {
-          max-height: 20px;
+          max-height: 40px;
         }
       }
     }
@@ -33,16 +33,16 @@
       height: 100px;
     }
     to {
-      height: 25px;
+      height: 40px;
     }
   }
 
   @keyframes expandHeader {
     from {
-      height: 25px; /* Текущая высота при удалении класса .scrolled */
+      height: 40px;
     }
     to {
-      height: 100px; /* Начальная высота */
+      height: 100px;
     }
   }
 

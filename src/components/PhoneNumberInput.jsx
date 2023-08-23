@@ -37,7 +37,7 @@ class PhoneNumberInput extends Component {
         <input
           type="tel"
           id="phoneNumber"
-          className="delivery-form"
+          className="delivery-phone-number"
           placeholder="(0__)___-__-__"
           value={this.state.phoneNumber}
           onChange={this.handlePhoneNumberChange}

@@ -49,6 +49,8 @@
       font-weight: bold;
       text-transform: uppercase;
       color: #747373;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
 
       .cart-letter {
         color: #464545;
@@ -56,6 +58,11 @@
 
       span {
         line-height: 2.5;
+
+        img {
+          max-width: 16px;
+          max-height: 30px;
+        }
       }
     }
   }
